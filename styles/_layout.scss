@@ -1,0 +1,80 @@
+header {
+  box-shadow: 0 .1rem 1rem .5rem #EFEFEF;
+  width: 100%;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+
+  .brand-logo {
+    width: 20rem;
+  }
+
+  .nav-links {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    
+    // gap: 3rem;
+
+    .nav-link__item {
+      list-style: none;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+      @include text-sm();
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      &:hover a{
+        color: $secondary;
+        text-decoration: underline;
+        text-decoration-color: $secondary;
+        text-decoration-thickness: 0.3rem;
+        text-underline-offset: 1.2rem;
+      }
+    }
+  }
+
+  form{
+    display: flex;
+   
+    input{
+      padding: 1rem;
+      outline: none;
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      border-right: none;
+      border: none;
+      background-color: #EFEFEF;
+      letter-spacing: 0.1rem;
+      @include text-xsm();
+      
+
+      &:focus{
+        border: .1rem solid $secondary;
+        border-right: none;
+      }
+    }
+
+    button{
+      padding: 1rem;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      cursor: pointer;
+      border: none;
+      // color: #fff;
+      background-color: $secondary;
+      width: 4rem;
+      display: flex;
+      align-items: center;
+      
+    }
+  }
+}

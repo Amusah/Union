@@ -15,5 +15,32 @@ body {
 }
 
 // Colors
+$secondary: #0B9C1B;
+$warning: #F90308;
+$info: #FEB201;
 
 // Fonts
+@mixin text-xsm($weight: 40rem, $size: 1.6rem){
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin text-sm($weight: 40rem, $size: 2.1rem){
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin text-md($weight: 40rem, $size: 3.2rem){
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin text-lg($weight: 40rem, $size: 3.6rem){
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin text-xlg($weight: 40rem, $size: 4.8rem){
+  font-weight: $weight;
+  font-size: $size;
+}

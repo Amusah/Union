@@ -12,3 +12,72 @@ html {
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
+
+header {
+  box-shadow: 0 0.1rem 1rem 0.5rem #EFEFEF;
+  width: 100%;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+header .brand-logo {
+  width: 20rem;
+}
+header .nav-links {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+header .nav-links .nav-link__item {
+  list-style: none;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  font-weight: 40rem;
+  font-size: 2.1rem;
+}
+header .nav-links .nav-link__item a {
+  color: #000;
+  text-decoration: none;
+}
+header .nav-links .nav-link__item:hover a {
+  color: #0B9C1B;
+  text-decoration: underline;
+  text-decoration-color: #0B9C1B;
+  text-decoration-thickness: 0.3rem;
+  text-underline-offset: 1.2rem;
+}
+header form {
+  display: flex;
+}
+header form input {
+  padding: 1rem;
+  outline: none;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-right: none;
+  border: none;
+  background-color: #EFEFEF;
+  letter-spacing: 0.1rem;
+  font-weight: 40rem;
+  font-size: 1.6rem;
+}
+header form input:focus {
+  border: 0.1rem solid #0B9C1B;
+  border-right: none;
+}
+header form button {
+  padding: 1rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #0B9C1B;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+}
