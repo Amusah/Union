@@ -1,5 +1,5 @@
 header {
-  box-shadow: 0 .1rem 1rem .5rem #EFEFEF;
+  box-shadow: 0 0.1rem 1rem 0.5rem $gray;
   width: 100%;
 
   .navbar {
@@ -19,7 +19,8 @@ header {
     display: flex;
     width: 50%;
     justify-content: space-between;
-    
+    align-items: center;
+
     // gap: 3rem;
 
     .nav-link__item {
@@ -32,7 +33,7 @@ header {
         color: #000;
         text-decoration: none;
       }
-      &:hover a{
+      &:hover a {
         color: $secondary;
         text-decoration: underline;
         text-decoration-color: $secondary;
@@ -42,28 +43,28 @@ header {
     }
   }
 
-  form{
+  form {
     display: flex;
-   
-    input{
+    align-items: center;
+
+    input {
       padding: 1rem;
       outline: none;
       border-top-left-radius: 2rem;
       border-bottom-left-radius: 2rem;
       border-right: none;
       border: none;
-      background-color: #EFEFEF;
+      background-color: $gray;
       letter-spacing: 0.1rem;
       @include text-xsm();
-      
 
-      &:focus{
-        border: .1rem solid $secondary;
+      &:focus {
+        border: 0.1rem solid $secondary;
         border-right: none;
       }
     }
 
-    button{
+    button {
       padding: 1rem;
       border-top-right-radius: 2rem;
       border-bottom-right-radius: 2rem;
@@ -74,7 +75,25 @@ header {
       width: 4rem;
       display: flex;
       align-items: center;
-      
+    }
+  }
+  .burger {
+    cursor: pointer;
+    display: none;
+
+    & span {
+      padding: 0.1rem 1.1rem;
+      background: $secondary;
+      margin: 0.5rem 0;
+      display: block;
+    }
+  }
+
+  .arrow{
+    cursor: pointer;
+    display: none;
+    img{
+      width: 4rem;
     }
   }
 }

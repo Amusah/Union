@@ -18,6 +18,7 @@ body {
 $secondary: #0B9C1B;
 $warning: #F90308;
 $info: #FEB201;
+$gray: #efefef;
 
 // Fonts
 @mixin text-xsm($weight: 40rem, $size: 1.6rem){
@@ -43,4 +44,20 @@ $info: #FEB201;
 @mixin text-xlg($weight: 40rem, $size: 4.8rem){
   font-weight: $weight;
   font-size: $size;
+}
+
+
+// Util classes
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
