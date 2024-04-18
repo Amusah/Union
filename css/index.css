@@ -14,7 +14,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .show {
@@ -30,6 +30,7 @@ body {
 header {
   box-shadow: 0 0.1rem 1rem 0.5rem #efefef;
   width: 100%;
+  background-color: #fff;
 }
 header .navbar {
   display: flex;
@@ -136,16 +137,18 @@ header .arrow img {
 @media screen and (max-width: 980px) {
   header {
     position: relative;
+    transition: transform 0.6s ease;
   }
   header .nav-links {
     width: 65%;
   }
   header form {
     position: absolute;
-    top: 90%;
+    top: -60%;
     left: 72%;
     margin-top: 2rem;
-    transition: all 0.7s ease-in;
+    transition: transform 0.6s ease;
+    z-index: -5;
   }
   header form input {
     width: 20rem;
@@ -153,34 +156,63 @@ header .arrow img {
   header .arrow {
     cursor: pointer;
     display: block;
+    transition: transform 0.6s ease;
   }
   header .arrow img {
     width: 4rem;
   }
+  header .toggle-form {
+    transform: translateY(400%);
+  }
+  header .rotate-arrow {
+    transform: rotateX(180deg);
+  }
 }
 @media screen and (max-width: 860px) {
   header .nav-links {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     justify-content: space-around;
     top: 0;
-    left: 20%;
+    left: 100%;
     background-color: #efefef;
-    height: 100vh;
+    height: 100%;
     width: 50%;
     padding: 5rem 0;
     text-align: center;
+    transition: transform 0.6s ease;
   }
   header form {
     display: none;
   }
   header .burger {
     display: block;
+    z-index: 2;
+    transition: transform 0.6s ease;
   }
   header .burger span {
     display: block;
   }
   header .arrow {
     display: none;
+  }
+  .nav-open {
+    transform: translateX(-100%);
+  }
+  .toggle .line1 {
+    transform: rotateZ(45deg);
+    transition: all 1s ease;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg);
+    transition: all 1s ease;
+  }
+}
+@media screen and (max-width: 490px) {
+  header .nav-links {
+    width: 100%;
   }
 }

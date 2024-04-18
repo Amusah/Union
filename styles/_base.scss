@@ -49,7 +49,7 @@ $gray: #efefef;
 
 // Util classes
 .hide{
-  display: none;
+  display: none !important;
 }
 
 .show{
