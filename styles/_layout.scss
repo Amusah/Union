@@ -12,7 +12,7 @@ header {
     margin: 0 auto;
   }
 
-  .brand-logo {
+  a .brand-logo {
     width: 20rem;
   }
 
@@ -102,11 +102,41 @@ header {
 
 /************************HERO SECTION***********************/
 main{
+  // #hero{
+  //   position: relative;
+  // }
   .banner{
     min-height: 90vh;
     background-image: url('/images/slide1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-btn{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .btn__prev, .btn__next{
+      // position: absolute;
+      padding: 2rem;
+      width: 4rem;
+      height: 5rem;
+      background-color: $secondary;
+      opacity: .5;
+      cursor: pointer;
+      
+      &:hover{
+        opacity: 1;
+      }
+    }
+
+    
   }
 }

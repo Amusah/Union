@@ -40,7 +40,7 @@ header .navbar {
   padding: 2rem 0;
   margin: 0 auto;
 }
-header .brand-logo {
+header a .brand-logo {
   width: 20rem;
 }
 header .nav-links {
@@ -123,6 +123,27 @@ main .banner {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .banner-btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .banner-btn .btn__prev, main .banner-btn .btn__next {
+  padding: 2rem;
+  width: 4rem;
+  height: 5rem;
+  background-color: #0B9C1B;
+  opacity: 0.5;
+  cursor: pointer;
+}
+main .banner-btn .btn__prev:hover, main .banner-btn .btn__next:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1080px) {
@@ -157,7 +178,7 @@ main .banner {
     left: 72%;
     margin-top: 2rem;
     transition: transform 0.6s ease;
-    z-index: -5;
+    z-index: 5;
   }
   header form input {
     width: 20rem;
