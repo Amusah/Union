@@ -116,6 +116,15 @@ header .arrow img {
   width: 4rem;
 }
 
+/************************HERO SECTION***********************/
+main .banner {
+  min-height: 90vh;
+  background-image: url("/images/slide1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media screen and (max-width: 1080px) {
   header .navbar {
     width: 100%;
