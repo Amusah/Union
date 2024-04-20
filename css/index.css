@@ -119,6 +119,7 @@ header .arrow img {
 /************************HERO SECTION***********************/
 main {
   /******************** INFO SECTION*********************/
+  /******************CARDS SECTION*******************/
 }
 main .banner {
   min-height: 90vh;
@@ -179,7 +180,7 @@ main .info__summary .info__badges {
 main .info__summary .info__badges span {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 100%;
   gap: 3rem;
@@ -187,7 +188,7 @@ main .info__summary .info__badges span {
 main .info__summary .info__badges .badge {
   position: relative;
   padding: 2rem 2.5rem;
-  width: 20rem;
+  width: 23rem;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -214,7 +215,62 @@ main .info__summary .info__badges .badge .text {
   font-weight: 40rem;
   font-size: 1.9rem;
 }
+main .cards__container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 50vh;
+  padding: 8rem;
+}
+main .cards__container .card {
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 0.9rem;
+  box-shadow: 0.2rem 0.2rem 2rem 0.5rem #efefef;
+}
+main .cards__container .card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+main .cards__container .card .card-header h3 {
+  font-size: 3rem;
+  color: #0B9C1B;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: #0B9C1B;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.2rem;
+}
+main .cards__container .card .card-header i {
+  font-size: 2.7rem;
+  color: #0B9C1B;
+}
+main .cards__container .card .card-body {
+  line-height: 2.5rem;
+  font-weight: 40rem;
+  font-size: 1.6rem;
+}
+main .cards__container .card:hover h3, main .cards__container i {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+main .cards__container .card:hover {
+  background-color: #0B9C1B;
+  color: #fff;
+}
+main .cards__container .card:hover i {
+  color: #fff;
+}
 
+/*
+color: $secondary;
+        text-decoration: underline;
+        text-decoration-color: $secondary;
+        text-decoration-thickness: 0.3rem;
+        text-underline-offset: 1.2rem;
+*/
 @media screen and (max-width: 1080px) {
   header .navbar {
     width: 100%;

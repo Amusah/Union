@@ -152,22 +152,12 @@ main {
     background: linear-gradient(120deg, $info 50%, $secondary 50%);
 
     h2 {
-      // position: absolute;
-      // top: 30%;
-      // left: 15%;
       z-index: 2;
       width: 50%;
       color: #fff;
       @include text-lg();
       font-weight: 500;
     }
-
-    // .info__text-box{
-    //   width: 45%;
-    //   height: 40vh;
-    //   background-color: $secondary;
-    //   clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 150%);
-    // }
 
     .info__badges {
       display: flex;
@@ -177,17 +167,13 @@ main {
       height: 100%;
       width: 45%;
       gap: 3rem;
-      
 
-      span{
+      span {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 100%;
-        
-        // justify-content: center;
-        // align-items: center;
         gap: 3rem;
       }
 
@@ -195,34 +181,101 @@ main {
         // height: 5rem;
         position: relative;
         padding: 2rem 2.5rem;
-        width: 20rem;
+        width: 23rem;
         color: #fff;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        border-radius: .7rem;
-        border: .1rem solid $info;
+        border-radius: 0.7rem;
+        border: 0.1rem solid $info;
         background: linear-gradient(120deg, $secondary 50%, $info 50%);
 
-        i{
+        i {
           position: absolute;
           top: 8%;
           left: 5%;
           font-size: 3rem;
         }
 
-        p{
+        p {
           margin: 0 auto;
         }
 
-        .number{
+        .number {
           @include text-md();
           font-weight: 600;
         }
-        .text{
+        .text {
           @include text-sm($size: 1.9rem);
         }
       }
     }
   }
+
+  /******************CARDS SECTION*******************/
+  .cards__container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50vh;
+    padding: 8rem;
+
+    .card {
+      padding: 2rem;
+      width: 30rem;
+      border-radius: .9rem;
+      box-shadow: .2rem .2rem 2rem .5rem $gray;
+      
+      // text-align: center;
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        h3 {
+          font-size: 3rem;
+          color: $secondary;
+          font-weight: 400;
+          text-decoration: underline;
+          text-decoration-color: $secondary;
+          text-underline-offset: 1rem;
+          text-decoration-thickness: 0.2rem;
+        }
+
+        i{
+          font-size: 2.7rem;
+          color: $secondary;
+        }
+      }
+
+      .card-body {
+        line-height: 2.5rem;
+        @include text-xsm();
+      }
+    }
+
+    .card:hover h3, i{
+      color: #fff;
+      text-decoration-color: #fff;
+    }
+
+    .card:hover{
+      background-color: $secondary;
+      color: #fff;
+    }
+
+    .card:hover i{
+      color: #fff;
+    }
+  }
 }
+
+/*
+color: $secondary;
+        text-decoration: underline;
+        text-decoration-color: $secondary;
+        text-decoration-thickness: 0.3rem;
+        text-underline-offset: 1.2rem;
+*/
