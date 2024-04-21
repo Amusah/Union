@@ -367,7 +367,6 @@ color: $secondary;
   }
   main .cards__container .card .card-header i {
     font-size: 2.3rem;
-    color: #0B9C1B;
   }
 }
 @media screen and (max-width: 860px) {
