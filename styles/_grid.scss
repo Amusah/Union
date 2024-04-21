@@ -31,6 +31,141 @@
       }
     }
   }
+
+  /******************** INFO SECTION*********************/
+  main {
+    .info__summary {
+      // position: relative;
+      // width: 100%;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      // height: 40vh;
+      // padding: 5rem;
+      // // padding-bottom: 5rem;
+      // background: linear-gradient(120deg, $info 50%, $secondary 50%);
+
+      h2 {
+        @include text-md();
+      }
+
+      .info__badges {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // // flex-direction: column;
+        // height: 100%;
+        // width: 45%;
+        gap: 2rem;
+
+        span {
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: center;
+          // align-items: center;
+          // height: 100%;
+          gap: 2rem;
+        }
+
+        // .badge {
+        //   height: 5rem;
+        //   position: relative;
+        //   padding: 2rem 2.5rem;
+        //   width: 23rem;
+        //   color: #fff;
+        //   display: flex;
+        //   justify-content: center;
+        //   flex-direction: column;
+        //   cursor: pointer;
+        //   border-radius: 0.7rem;
+        //   border: 0.1rem solid $info;
+        //   background: linear-gradient(120deg, $secondary 50%, $info 50%);
+
+        //   i {
+        //     position: absolute;
+        //     top: 8%;
+        //     left: 5%;
+        //     font-size: 3rem;
+        //   }
+
+        //   p {
+        //     margin: 0 auto;
+        //   }
+
+        //   .number {
+        //     @include text-md();
+        //     font-weight: 600;
+        //   }
+        //   .text {
+        //     @include text-sm($size: 1.9rem);
+        //   }
+        // }
+      }
+    }
+
+    /******************CARDS SECTION*******************/
+    .cards__container {
+      // display: flex;
+      // justify-content: space-evenly;
+      // width: 100%;
+      // height: 50vh;
+      // padding: 8rem;
+
+      .card {
+        // padding: 2rem;
+        // width: 30rem;
+        // height: 30rem;
+        // cursor: pointer;
+        // border-radius: 0.9rem;
+        // box-shadow: 0.2rem 0.2rem 2rem 0.5rem $gray;
+
+        // text-align: center;
+
+        .card-header {
+          // display: flex;
+          // justify-content: space-between;
+          // align-items: center;
+          // margin-bottom: 2rem;
+
+          // h3 {
+          //  font-size: 3rem;
+          //  color: $secondary;
+          //  font-weight: 400;
+          //  text-decoration: underline;
+          //  text-decoration-color: $secondary;
+          //  text-underline-offset: 1rem;
+          //  text-decoration-thickness: 0.2rem;
+          // }
+
+          // i {
+          //   font-size: 2.7rem;
+          //   color: $secondary;
+          // }
+        }
+
+        // .card-body {
+        //   line-height: 2.5rem;
+        //   @include text-xsm();
+        // }
+      }
+
+      // .card:hover h3,
+      // i {
+      //   color: #fff;
+      //   text-decoration-color: #fff;
+      // }
+
+      // .card:hover {
+      //   background-color: $secondary;
+      //   color: #fff;
+      //   box-shadow: none;
+      // }
+
+      // .card:hover i {
+      //   color: #fff;
+      // }
+    }
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -71,6 +206,140 @@
 
     .rotate-arrow {
       transform: rotateX(180deg);
+    }
+  }
+
+  /******************** INFO SECTION*********************/
+  main {
+    .info__summary {
+      // position: relative;
+      // width: 100%;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      // height: 50vh;
+      // padding: 5rem;
+      // // padding-bottom: 5rem;
+      flex-direction: column;
+      background: $secondary;
+
+      h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4rem;
+        @include text-md($weight: 500);
+      }
+
+      .info__badges {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // // flex-direction: column;
+        // height: 100%;
+        // width: 45%;
+        // gap: 3rem;
+
+        span {
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: center;
+          // align-items: center;
+          // height: 100%;
+          // gap: 3rem;
+        }
+
+        .badge {
+          // height: 5rem;
+          // position: relative;
+          // padding: 2rem 2.5rem;
+          width: 25rem;
+          // color: #fff;
+          // display: flex;
+          // justify-content: center;
+          // flex-direction: column;
+          // cursor: pointer;
+          // border-radius: 0.7rem;
+          // border: 0.1rem solid $info;
+          // background: linear-gradient(120deg, $secondary 50%, $info 50%);
+
+          // i {
+          //   // position: absolute;
+          //   // top: 8%;
+          //   // left: 5%;
+          //   font-size: 2.5rem;
+          // }
+
+          // p {
+          //   margin: 0 auto;
+          // }
+
+          .number {
+            @include text-md($weight: 500, $size: 3rem);
+            // font-weight: 600;
+          }
+          // .text {
+          //   @include text-sm($size: 1.9rem);
+          // }
+        }
+      }
+    }
+
+    /******************CARDS SECTION*******************/
+    .cards__container {
+      // display: flex;
+      // justify-content: space-evenly;
+      // width: 100%;
+      // height: 50vh;
+      // padding: 8rem;
+
+      .card {
+        margin-bottom: 4rem;
+        // padding: 2rem;
+        // width: 30rem;
+        // height: 30rem;
+        // cursor: pointer;
+        // border-radius: 0.9rem;
+        // box-shadow: 0.2rem 0.2rem 2rem 0.5rem $gray;
+
+        // text-align: center;
+
+        .card-header {
+          // display: flex;
+          // justify-content: space-between;
+          // align-items: center;
+          // margin-bottom: 2rem;
+
+          h3 {
+           font-size: 2.2rem;
+          }
+
+          i {
+            font-size: 2.3rem;
+            color: $secondary;
+          }
+        }
+
+        // .card-body {
+        //   line-height: 2.5rem;
+        //   @include text-xsm();
+        // }
+      }
+
+      // .card:hover h3,
+      // i {
+      //   color: #fff;
+      //   text-decoration-color: #fff;
+      // }
+
+      // .card:hover {
+      //   background-color: $secondary;
+      //   color: #fff;
+      //   box-shadow: none;
+      // }
+
+      // .card:hover i {
+      //   color: #fff;
+      // }
     }
   }
 }
@@ -154,6 +423,144 @@
   }
 }
 
+@media screen and (max-width: 780px){
+  main .cards__container{
+    flex-wrap: wrap;
+    // .card{
+    //   width: 0;
+    //   height: 0;
+    // }
+  }
+}
+
+@media screen and (max-width: 650px){
+  main .info__summary h2{
+    @include text-md($weight: 500, $size: 3rem);
+
+  }
+}
+
+@media screen and (max-width: 570px){
+  /******************** INFO SECTION*********************/
+  main {
+    .info__summary {
+      width: 100%;
+
+      h2 {
+        @include text-md($size: 2.8rem, $weight: 500);
+      }
+
+      .info__badges {
+        flex-direction: column;
+        width: 90%;
+
+        span {
+          width: 100%;
+        }
+
+        .badge {
+          // height: 5rem;
+          // position: relative;
+          // padding: 2rem 2.5rem;
+          width: 90%;
+          color: #fff;
+          // display: flex;
+          // justify-content: center;
+          // flex-direction: column;
+          // cursor: pointer;
+          // border-radius: 0.7rem;
+          // border: 0.1rem solid $info;
+          // background: linear-gradient(120deg, $secondary 50%, $info 50%);
+
+          i {
+            // position: absolute;
+            // top: 8%;
+            // left: 5%;
+            font-size: 2.5rem;
+          }
+
+          p {
+            margin: 0 auto;
+          }
+
+          .number {
+            @include text-md($size: 3rem);
+            // font-weight: 600;
+          }
+          // .text {
+          //   @include text-sm($size: 1.9rem);
+          // }
+        }
+      }
+    }
+
+    /******************CARDS SECTION*******************/
+    .cards__container {
+      // display: flex;
+      // justify-content: space-evenly;
+      // width: 100%;
+      // height: 50vh;
+      // padding: 8rem;
+      
+
+      .card {
+        margin-bottom: 4rem;
+        // padding: 2rem;
+        // width: 30rem;
+        // height: 30rem;
+        // cursor: pointer;
+        // border-radius: 0.9rem;
+        // box-shadow: 0.2rem 0.2rem 2rem 0.5rem $gray;
+
+        // text-align: center;
+
+        .card-header {
+          // display: flex;
+          // justify-content: space-between;
+          // align-items: center;
+          // margin-bottom: 2rem;
+
+          // h3 {
+          //  font-size: 3rem;
+          //  color: $secondary;
+          //  font-weight: 400;
+          //  text-decoration: underline;
+          //  text-decoration-color: $secondary;
+          //  text-underline-offset: 1rem;
+          //  text-decoration-thickness: 0.2rem;
+          // }
+
+          // i {
+          //   font-size: 2.7rem;
+          //   color: $secondary;
+          // }
+        }
+
+        // .card-body {
+        //   line-height: 2.5rem;
+        //   @include text-xsm();
+        // }
+      }
+
+      // .card:hover h3,
+      // i {
+      //   color: #fff;
+      //   text-decoration-color: #fff;
+      // }
+
+      // .card:hover {
+      //   background-color: $secondary;
+      //   color: #fff;
+      //   box-shadow: none;
+      // }
+
+      // .card:hover i {
+      //   color: #fff;
+      // }
+    }
+  }
+}
+
 @media screen and (max-width: 490px) {
   header {
     // .navbar {
@@ -215,3 +622,23 @@
     // }
   }
 }
+
+@media screen and (max-width: 390px){
+  main .cards__container{
+    .card {
+        .card-header {
+
+          h3 {
+           font-size: 2rem;
+          //  color: $secondary;
+          //  font-weight: 400;
+          //  text-decoration: underline;
+          //  text-decoration-color: $secondary;
+          //  text-underline-offset: 1rem;
+          //  text-decoration-thickness: 0.2rem;
+          }
+        }
+      }
+  }
+}
+

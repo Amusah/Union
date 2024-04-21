@@ -53,7 +53,7 @@ header .nav-links .nav-link__item {
   list-style: none;
   letter-spacing: 0.1rem;
   cursor: pointer;
-  font-weight: 40rem;
+  font-weight: 400;
   font-size: 2.1rem;
 }
 header .nav-links .nav-link__item a {
@@ -80,7 +80,7 @@ header form input {
   border: none;
   background-color: #efefef;
   letter-spacing: 0.1rem;
-  font-weight: 40rem;
+  font-weight: 400;
   font-size: 1.6rem;
 }
 header form input:focus {
@@ -157,7 +157,6 @@ main .info__summary {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 40vh;
   padding: 5rem;
   background: linear-gradient(120deg, #FEB201 50%, #0B9C1B 50%);
 }
@@ -165,7 +164,7 @@ main .info__summary h2 {
   z-index: 2;
   width: 50%;
   color: #fff;
-  font-weight: 40rem;
+  font-weight: 400;
   font-size: 3.6rem;
   font-weight: 500;
 }
@@ -193,6 +192,7 @@ main .info__summary .info__badges .badge {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
   border-radius: 0.7rem;
   border: 0.1rem solid #FEB201;
   background: linear-gradient(120deg, #0B9C1B 50%, #FEB201 50%);
@@ -207,24 +207,23 @@ main .info__summary .info__badges .badge p {
   margin: 0 auto;
 }
 main .info__summary .info__badges .badge .number {
-  font-weight: 40rem;
+  font-weight: 400;
   font-size: 3.2rem;
   font-weight: 600;
 }
 main .info__summary .info__badges .badge .text {
-  font-weight: 40rem;
+  font-weight: 400;
   font-size: 1.9rem;
 }
 main .cards__container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  height: 50vh;
   padding: 8rem;
 }
 main .cards__container .card {
   padding: 2rem;
-  width: 30rem;
+  cursor: pointer;
   border-radius: 0.9rem;
   box-shadow: 0.2rem 0.2rem 2rem 0.5rem #efefef;
 }
@@ -249,16 +248,18 @@ main .cards__container .card .card-header i {
 }
 main .cards__container .card .card-body {
   line-height: 2.5rem;
-  font-weight: 40rem;
+  font-weight: 400;
   font-size: 1.6rem;
 }
-main .cards__container .card:hover h3, main .cards__container i {
+main .cards__container .card:hover h3,
+main .cards__container i {
   color: #fff;
   text-decoration-color: #fff;
 }
 main .cards__container .card:hover {
   background-color: #0B9C1B;
   color: #fff;
+  box-shadow: none;
 }
 main .cards__container .card:hover i {
   color: #fff;
@@ -287,6 +288,20 @@ color: $secondary;
   }
   header form button img {
     width: 1.8rem;
+  }
+  /******************** INFO SECTION*********************/
+  main {
+    /******************CARDS SECTION*******************/
+  }
+  main .info__summary h2 {
+    font-weight: 400;
+    font-size: 3.2rem;
+  }
+  main .info__summary .info__badges {
+    gap: 2rem;
+  }
+  main .info__summary .info__badges span {
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 980px) {
@@ -321,6 +336,38 @@ color: $secondary;
   }
   header .rotate-arrow {
     transform: rotateX(180deg);
+  }
+  /******************** INFO SECTION*********************/
+  main {
+    /******************CARDS SECTION*******************/
+  }
+  main .info__summary {
+    flex-direction: column;
+    background: #0B9C1B;
+  }
+  main .info__summary h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    font-size: 3.2rem;
+  }
+  main .info__summary .info__badges .badge {
+    width: 25rem;
+  }
+  main .info__summary .info__badges .badge .number {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  main .cards__container .card {
+    margin-bottom: 4rem;
+  }
+  main .cards__container .card .card-header h3 {
+    font-size: 2.2rem;
+  }
+  main .cards__container .card .card-header i {
+    font-size: 2.3rem;
+    color: #0B9C1B;
   }
 }
 @media screen and (max-width: 860px) {
@@ -366,8 +413,61 @@ color: $secondary;
     transition: all 1s ease;
   }
 }
+@media screen and (max-width: 780px) {
+  main .cards__container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .info__summary h2 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  /******************** INFO SECTION*********************/
+  main {
+    /******************CARDS SECTION*******************/
+  }
+  main .info__summary {
+    width: 100%;
+  }
+  main .info__summary h2 {
+    font-weight: 500;
+    font-size: 2.8rem;
+  }
+  main .info__summary .info__badges {
+    flex-direction: column;
+    width: 90%;
+  }
+  main .info__summary .info__badges span {
+    width: 100%;
+  }
+  main .info__summary .info__badges .badge {
+    width: 90%;
+    color: #fff;
+  }
+  main .info__summary .info__badges .badge i {
+    font-size: 2.5rem;
+  }
+  main .info__summary .info__badges .badge p {
+    margin: 0 auto;
+  }
+  main .info__summary .info__badges .badge .number {
+    font-weight: 400;
+    font-size: 3rem;
+  }
+  main .cards__container .card {
+    margin-bottom: 4rem;
+  }
+}
 @media screen and (max-width: 490px) {
   header .nav-links {
     width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  main .cards__container .card .card-header h3 {
+    font-size: 2rem;
   }
 }

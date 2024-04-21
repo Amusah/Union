@@ -22,27 +22,27 @@ $gray: #efefef;
 $white: #fff;
 
 // Fonts
-@mixin text-xsm($weight: 40rem, $size: 1.6rem){
+@mixin text-xsm($weight: 400, $size: 1.6rem){
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-sm($weight: 40rem, $size: 2.1rem){
+@mixin text-sm($weight: 400, $size: 2.1rem){
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-md($weight: 40rem, $size: 3.2rem){
+@mixin text-md($weight: 400, $size: 3.2rem){
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-lg($weight: 40rem, $size: 3.6rem){
+@mixin text-lg($weight: 400, $size: 3.6rem){
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-xlg($weight: 40rem, $size: 4.8rem){
+@mixin text-xlg($weight: 400, $size: 4.8rem){
   font-weight: $weight;
   font-size: $size;
 }
