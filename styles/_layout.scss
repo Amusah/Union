@@ -149,12 +149,12 @@ main {
     // height: 45vh;
     padding: 5rem;
     // padding-bottom: 5rem;
-    background: linear-gradient(120deg, $info 50%, $secondary 50%);
+    background: linear-gradient(45deg, $white 50%, $secondary 50%);
 
     h2 {
       z-index: 2;
       width: 50%;
-      color: #fff;
+      color: $secondary;
       @include text-lg();
       font-weight: 500;
     }
@@ -182,14 +182,14 @@ main {
         position: relative;
         padding: 2rem 2.5rem;
         width: 23rem;
-        color: #fff;
+        color: $info;
         display: flex;
         justify-content: center;
         flex-direction: column;
         cursor: pointer;
         border-radius: 0.7rem;
         border: 0.1rem solid $info;
-        background: linear-gradient(120deg, $secondary 50%, $info 50%);
+        background: linear-gradient(45deg, $white 50%, $secondary 50%);
 
         i {
           position: absolute;
@@ -200,6 +200,7 @@ main {
 
         p {
           margin: 0 auto;
+          text-shadow: 0rem .1rem .01rem #000;
         }
 
         .number {
@@ -279,63 +280,68 @@ main {
 }
 
 /******************INQUIRY SECTION*******************/
-  .contact__container{
-    width: 100%;
-    min-height: 45vh;
+.contact__container {
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: $secondary;
+  padding: 0 5rem;
+  background: linear-gradient(120deg, $white 50%, $secondary 50%);
+  border-top: .1rem solid rgba($secondary, 0.5 );
+
+  .instruction {
+    width: 50%;
+
+    h2 {
+      @include text-lg($weight: 500);
+      
+    }
+    p {
+      line-height: 2.5rem;
+      @include text-sm();
+      width: 70%;
+    }
+  }
+
+  form {
+    width: 40%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #fff;
-    padding: 0 5rem;
-    background: linear-gradient(120deg, $info 50%, $secondary 50%);
+    // justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #fff;
+    font-size: 5rem;
 
-    .instruction{
-      width: 50%;
+    input,
+    select,
+    textarea {
+      padding: 1rem 1rem;
+      outline: none;
+      background-color: $gray;
+      border: none;
 
-      h2{
-        @include text-lg($weight: 500);
-      }
-      p{
-        line-height: 2.5rem;
-        @include text-sm();
+      &:focus {
+        border: 0.1rem solid $secondary;
       }
     }
 
-    form{
-      width: 40%;
-      display: flex;
-      // justify-content: center;
-      // align-items: center;
-      flex-direction: column;
-      padding: 2rem;
-      gap: 2rem;
-      background-color: #fff;
-      font-size: 5rem;
+    button {
+      padding: 1.5rem 2rem;
+      background-color: $secondary;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      width: 60%;
+      border-radius: 0.5rem;
+      @include text-xsm($weight: 600);
 
-      input, select, textarea{
-        padding: 1rem 1rem;
-        outline: none;
-        background-color: $gray;
-        border: none;
-
-        &:focus{
-          border: 0.1rem solid $secondary;
-        }
-      }
-
-      button{
-        padding: 1.5rem 2rem;
-        background-color: $secondary;
-        color: #fff;
-        cursor: pointer;
-        border: none;
-        width: 60%;
-        border-radius: .5rem;
-        @include text-xsm($weight: 600);
-
-        &:hover{
-          background-color: lighten($secondary, 5);
-        }
+      &:hover {
+        background-color: lighten($secondary, 5);
       }
     }
   }
+}

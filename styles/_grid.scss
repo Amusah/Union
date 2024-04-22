@@ -219,6 +219,7 @@
         width: 100%;
         text-align: center;
         margin-bottom: 4rem;
+        color: $white;
         @include text-md($weight: 500);
       }
 
@@ -326,13 +327,14 @@
       width: 70%;
       margin-bottom: 4rem;
 
-      // h2{
-      //   @include text-lg($weight: 500);
-      // }
-      // p{
-      //   line-height: 2.5rem;
-      //   @include text-sm();
-      // }
+      h2{
+        color: $white;
+        // @include text-lg($weight: 500);
+      }
+      p{
+        color: $white;
+        width: 100%;
+      }
     }
 
     form{
@@ -393,7 +395,8 @@
     .nav-links {
       position: fixed;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 4rem;
       top: 0;
       left: 100%;
       background-color: $gray;
@@ -469,6 +472,19 @@
     @include text-md($weight: 500, $size: 3rem);
 
   }
+
+   .contact__container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .instruction{
+      width: 90%;
+    }
+
+    form{
+      width: 90%;
+    }
+  }
 }
 
 @media screen and (max-width: 570px){
@@ -496,7 +512,7 @@
           // position: relative;
           // padding: 2rem 2.5rem;
           width: 90%;
-          color: #fff;
+          color: $info;
           // display: flex;
           // justify-content: center;
           // flex-direction: column;
@@ -517,7 +533,7 @@
           }
 
           .number {
-            @include text-md($size: 3rem);
+            @include text-md($weight: 600,  $size: 3rem);
             // font-weight: 600;
           }
           // .text {
@@ -593,10 +609,10 @@
     }
   }
 
-  .contact__container{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+  // .contact__container{
+  //   padding-left: 2rem;
+  //   padding-right: 2rem;
+  // }
   
 }
 
