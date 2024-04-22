@@ -548,6 +548,7 @@ main .cards__container .card:hover i {
   }
   main .cards__container .card {
     margin-bottom: 4rem;
+    width: 100%;
   }
 }
 @media screen and (max-width: 490px) {
@@ -564,6 +565,9 @@ main .cards__container .card:hover i {
   }
 }
 @media screen and (max-width: 390px) {
+  main .cards__container {
+    padding: 8rem 3rem;
+  }
   main .cards__container .card .card-header h3 {
     font-size: 2rem;
   }
