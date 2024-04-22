@@ -212,14 +212,6 @@
   /******************** INFO SECTION*********************/
   main {
     .info__summary {
-      // position: relative;
-      // width: 100%;
-      // display: flex;
-      // justify-content: space-around;
-      // align-items: center;
-      // height: 50vh;
-      // padding: 5rem;
-      // // padding-bottom: 5rem;
       flex-direction: column;
       background: $secondary;
 
@@ -231,27 +223,8 @@
       }
 
       .info__badges {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // // flex-direction: column;
-        // height: 100%;
-        // width: 45%;
-        // gap: 3rem;
-
-        // span {
-        //   // display: flex;
-        //   // flex-direction: column;
-        //   // justify-content: center;
-        //   // align-items: center;
-        //   // height: 100%;
-        //   // gap: 3rem;
-        // }
 
         .badge {
-          // height: 5rem;
-          // position: relative;
-          // padding: 2rem 2.5rem;
           width: 25rem;
           // color: #fff;
           // display: flex;
@@ -339,6 +312,64 @@
 
       // .card:hover i {
       //   color: #fff;
+      // }
+    }
+  }
+
+  /******************INQUIRY SECTION*******************/
+  .contact__container{
+    padding: 10rem 5rem;
+    flex-direction: column;
+    background: $secondary;
+
+    .instruction{
+      width: 70%;
+      margin-bottom: 4rem;
+
+      // h2{
+      //   @include text-lg($weight: 500);
+      // }
+      // p{
+      //   line-height: 2.5rem;
+      //   @include text-sm();
+      // }
+    }
+
+    form{
+      width: 70%;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: column;
+      // padding: 2rem;
+      // gap: 2rem;
+      // background-color: #fff;
+      // font-size: 5rem;
+
+      // input, select, textarea{
+      //   padding: 1rem 1rem;
+      //   outline: none;
+      //   background-color: $gray;
+      //   border: none;
+
+      //   &:focus{
+      //     border: 0.1rem solid $secondary;
+      //   }
+      // }
+
+      // button{
+      //   padding: 1.5rem 2rem;
+      //   background-color: $secondary;
+      //   color: #fff;
+      //   cursor: pointer;
+      //   border: none;
+      //   // width: 70%;
+      //   border-radius: .5rem;
+      //   @include text-xsm($weight: 600);
+
+      //   &:hover{
+      //     background-color: lighten($secondary, 5);
+      //   }
       // }
     }
   }
@@ -445,6 +476,8 @@
   main {
     .info__summary {
       width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
 
       h2 {
         @include text-md($size: 2.8rem, $weight: 500);
@@ -514,27 +547,27 @@
 
         // text-align: center;
 
-        .card-header {
-          // display: flex;
-          // justify-content: space-between;
-          // align-items: center;
-          // margin-bottom: 2rem;
+        // .card-header {
+        //   // display: flex;
+        //   // justify-content: space-between;
+        //   // align-items: center;
+        //   // margin-bottom: 2rem;
 
-          // h3 {
-          //  font-size: 3rem;
-          //  color: $secondary;
-          //  font-weight: 400;
-          //  text-decoration: underline;
-          //  text-decoration-color: $secondary;
-          //  text-underline-offset: 1rem;
-          //  text-decoration-thickness: 0.2rem;
-          // }
+        //   // h3 {
+        //   //  font-size: 3rem;
+        //   //  color: $secondary;
+        //   //  font-weight: 400;
+        //   //  text-decoration: underline;
+        //   //  text-decoration-color: $secondary;
+        //   //  text-underline-offset: 1rem;
+        //   //  text-decoration-thickness: 0.2rem;
+        //   // }
 
-          // i {
-          //   font-size: 2.7rem;
-          //   color: $secondary;
-          // }
-        }
+        //   // i {
+        //   //   font-size: 2.7rem;
+        //   //   color: $secondary;
+        //   // }
+        // }
 
         // .card-body {
         //   line-height: 2.5rem;
@@ -559,6 +592,12 @@
       // }
     }
   }
+
+  .contact__container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
 }
 
 @media screen and (max-width: 490px) {
@@ -620,6 +659,18 @@
     //   //   width: 4rem;
     //   // }
     // }
+  }
+
+  /******************INQUIRY SECTION*******************/
+  .contact__container{
+    .instruction{
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    form{
+      width: 100%;
+    }
   }
 }
 

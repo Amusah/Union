@@ -278,10 +278,64 @@ main {
   }
 }
 
-/*
-color: $secondary;
-        text-decoration: underline;
-        text-decoration-color: $secondary;
-        text-decoration-thickness: 0.3rem;
-        text-underline-offset: 1.2rem;
-*/
+/******************INQUIRY SECTION*******************/
+  .contact__container{
+    width: 100%;
+    min-height: 45vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    padding: 0 5rem;
+    background: linear-gradient(120deg, $info 50%, $secondary 50%);
+
+    .instruction{
+      width: 50%;
+
+      h2{
+        @include text-lg($weight: 500);
+      }
+      p{
+        line-height: 2.5rem;
+        @include text-sm();
+      }
+    }
+
+    form{
+      width: 40%;
+      display: flex;
+      // justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      gap: 2rem;
+      background-color: #fff;
+      font-size: 5rem;
+
+      input, select, textarea{
+        padding: 1rem 1rem;
+        outline: none;
+        background-color: $gray;
+        border: none;
+
+        &:focus{
+          border: 0.1rem solid $secondary;
+        }
+      }
+
+      button{
+        padding: 1.5rem 2rem;
+        background-color: $secondary;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        width: 60%;
+        border-radius: .5rem;
+        @include text-xsm($weight: 600);
+
+        &:hover{
+          background-color: lighten($secondary, 5);
+        }
+      }
+    }
+  }
