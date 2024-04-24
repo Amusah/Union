@@ -328,6 +328,54 @@ main .cards__container .card:hover i {
   background-color: #0db41f;
 }
 
+/*********************CONTACT SECTION**********************/
+footer .footer-content {
+  min-height: 30vh;
+  width: 100%;
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 8rem 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer-content h3 {
+  font-weight: 600;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+}
+footer .footer-content .address p,
+footer .footer-content .open-hours p {
+  line-height: 1.9;
+  color: #efefef;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+footer .footer-content .resources span, footer .footer-content .socials span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.9;
+}
+footer .footer-content .resources span a, footer .footer-content .socials span a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+footer .footer-content .resources span a:hover, footer .footer-content .socials span a:hover {
+  color: #0B9C1B;
+}
+footer .copyright {
+  padding: 3rem;
+  background-color: #141414;
+}
+footer .copyright p {
+  color: #efefef;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
 @media screen and (max-width: 1080px) {
   header .navbar {
     width: 100%;

@@ -6,6 +6,7 @@ const arrow = document.querySelector(".arrow");
 const searchField = document.querySelector(".form");
 const banner = document.querySelector(".banner");
 const bannerBtn = document.querySelector(".banner-btn");
+const year = document.querySelector(".copyright .year");
 
 /*********** NAVIGATION BAR ************/
 
@@ -58,25 +59,34 @@ const changeImage = () => {
 
 setInterval(changeImage, 7000);
 
-
 bannerBtn.addEventListener("click", ({ target }) => {
   // console.log('clicked')
-  if (target.classList.contains("btn__next") || target.classList.contains("right-arrow")) {
-    console.log('next')
-    if(counter === sliderImages.length - 1){
+  if (
+    target.classList.contains("btn__next") ||
+    target.classList.contains("right-arrow")
+  ) {
+    console.log("next");
+    if (counter === sliderImages.length - 1) {
       counter = 0;
-    } else{
+    } else {
       counter++;
     }
     changeImage();
   }
 
-  if(target.classList.contains('btn__prev') || target.classList.contains("left-arrow")){
-    if(counter === 0){
+  if (
+    target.classList.contains("btn__prev") ||
+    target.classList.contains("left-arrow")
+  ) {
+    if (counter === 0) {
       counter = sliderImages.length - 1;
-    } else{
+    } else {
       counter--;
     }
     changeImage();
-  }  
+  }
 });
+
+
+/***************Footer Date***************/
+year.textContent = new Date().getFullYear();

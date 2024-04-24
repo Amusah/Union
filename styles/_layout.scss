@@ -200,7 +200,7 @@ main {
 
         p {
           margin: 0 auto;
-          text-shadow: 0rem .1rem .01rem #000;
+          text-shadow: 0rem 0.1rem 0.01rem #000;
         }
 
         .number {
@@ -289,14 +289,13 @@ main {
   color: $secondary;
   padding: 0 5rem;
   background: linear-gradient(120deg, $white 50%, $secondary 50%);
-  border-top: .1rem solid rgba($secondary, 0.5 );
+  border-top: 0.1rem solid rgba($secondary, 0.5);
 
   .instruction {
     width: 50%;
 
     h2 {
       @include text-lg($weight: 500);
-      
     }
     p {
       line-height: 2.5rem;
@@ -342,6 +341,59 @@ main {
       &:hover {
         background-color: lighten($secondary, 5);
       }
+    }
+  }
+}
+
+/*********************CONTACT SECTION**********************/
+footer {
+  .footer-content {
+    min-height: 30vh;
+    width: 100%;
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 8rem 4rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    h3 {
+      @include text-sm($weight: 600, $size: 1.9rem);
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .address p,
+    .open-hours p {
+      line-height: 1.9;
+      color: $gray;
+      @include text-xsm();
+    }
+
+    .resources span, .socials span{
+      display: flex;
+      flex-direction: column;
+      line-height: 1.9;
+
+      a{
+        color: #fff;
+        text-decoration: none;
+        @include text-xsm();
+
+        &:hover{
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .copyright{
+    padding: 3rem;
+    background-color: #141414;
+
+    p{
+      color: $gray;
+      @include text-xsm($weight: 500);
     }
   }
 }
