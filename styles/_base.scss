@@ -15,50 +15,70 @@ body {
 }
 
 // Colors
-$secondary: #0B9C1B;
-$warning: #F90308;
-$info: #FEB201;
+$secondary: #0b9c1b;
+$warning: #f90308;
+$info: #feb201;
 $gray: #efefef;
 $white: #fff;
 
 // Fonts
-@mixin text-xsm($weight: 400, $size: 1.6rem){
+@mixin text-xsm($weight: 400, $size: 1.6rem) {
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-sm($weight: 400, $size: 2.1rem){
+@mixin text-sm($weight: 400, $size: 2.1rem) {
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-md($weight: 400, $size: 3.2rem){
+@mixin text-md($weight: 400, $size: 3.2rem) {
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-lg($weight: 400, $size: 3.6rem){
+@mixin text-lg($weight: 400, $size: 3.6rem) {
   font-weight: $weight;
   font-size: $size;
 }
 
-@mixin text-xlg($weight: 400, $size: 4.8rem){
+@mixin text-xlg($weight: 400, $size: 4.8rem) {
   font-weight: $weight;
   font-size: $size;
 }
-
 
 // Util classes
-.hide{
+.hide {
   display: none !important;
 }
 
-.show{
+.show {
   display: block;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Animations
+// .animate-dropdown {
+//   animation-name: MoveInBottom;
+//   animation-duration: 0.2s;
+//   animation-timing-function: ease-out;
+//   animation-fill-mode: backwards;
+//   animation-delay: 0.75s;
+// }
+
+@keyframes MoveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

@@ -27,6 +27,16 @@ body {
   align-items: center;
 }
 
+@keyframes MoveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 header {
   box-shadow: 0 0.1rem 1rem 0.5rem #efefef;
   width: 100%;
@@ -60,12 +70,42 @@ header .nav-links .nav-link__item a {
   color: #000;
   text-decoration: none;
 }
-header .nav-links .nav-link__item:hover a {
-  color: #0B9C1B;
+header .nav-links .nav-link__item:hover a:not(.dropdown-menu__item) {
+  color: #0b9c1b;
   text-decoration: underline;
-  text-decoration-color: #0B9C1B;
+  text-decoration-color: #0b9c1b;
   text-decoration-thickness: 0.3rem;
   text-underline-offset: 1.2rem;
+}
+header .nav-links .dropdown-menu {
+  position: absolute;
+  padding: 2rem 0;
+  top: 11%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #efefef;
+  transition: all 0.2s;
+  animation: MoveInBottom 0.3s ease-out backwards;
+  display: none;
+}
+header .nav-links .dropdown-menu li {
+  list-style: none;
+  padding: 0.6rem 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+header .nav-links .dropdown-menu li:hover {
+  background-color: #0b9c1b;
+}
+header .nav-links .dropdown-menu li:hover a {
+  color: #fff;
+}
+header .nav-links .dropdown-menu li .dropdown-menu__item {
+  padding: 3rem;
+}
+header .nav-links .dropdown-link:hover .dropdown-menu {
+  display: flex;
 }
 header form {
   display: flex;
@@ -84,7 +124,7 @@ header form input {
   font-size: 1.6rem;
 }
 header form input:focus {
-  border: 0.1rem solid #0B9C1B;
+  border: 0.1rem solid #0b9c1b;
   border-right: none;
 }
 header form button {
@@ -93,7 +133,7 @@ header form button {
   border-bottom-right-radius: 2rem;
   cursor: pointer;
   border: none;
-  background-color: #0B9C1B;
+  background-color: #0b9c1b;
   width: 4rem;
   display: flex;
   align-items: center;
@@ -104,7 +144,7 @@ header .burger {
 }
 header .burger span {
   padding: 0.1rem 1.1rem;
-  background: #0B9C1B;
+  background: #0b9c1b;
   margin: 0.5rem 0;
   display: block;
 }
@@ -143,7 +183,7 @@ main .banner-btn .btn__next {
   padding: 2rem;
   width: 4rem;
   height: 5rem;
-  background-color: #0B9C1B;
+  background-color: #0b9c1b;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -158,12 +198,12 @@ main .info__summary {
   justify-content: space-around;
   align-items: center;
   padding: 5rem;
-  background: linear-gradient(45deg, #fff 50%, #0B9C1B 50%);
+  background: linear-gradient(45deg, #fff 50%, #0b9c1b 50%);
 }
 main .info__summary h2 {
   z-index: 2;
   width: 50%;
-  color: #0B9C1B;
+  color: #0b9c1b;
   font-weight: 400;
   font-size: 3.6rem;
   font-weight: 500;
@@ -188,14 +228,14 @@ main .info__summary .info__badges .badge {
   position: relative;
   padding: 2rem 2.5rem;
   width: 23rem;
-  color: #FEB201;
+  color: #feb201;
   display: flex;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
   border-radius: 0.7rem;
-  border: 0.1rem solid #FEB201;
-  background: linear-gradient(45deg, #fff 50%, #0B9C1B 50%);
+  border: 0.1rem solid #feb201;
+  background: linear-gradient(45deg, #fff 50%, #0b9c1b 50%);
 }
 main .info__summary .info__badges .badge i {
   position: absolute;
@@ -236,16 +276,16 @@ main .cards__container .card .card-header {
 }
 main .cards__container .card .card-header h3 {
   font-size: 3rem;
-  color: #0B9C1B;
+  color: #0b9c1b;
   font-weight: 400;
   text-decoration: underline;
-  text-decoration-color: #0B9C1B;
+  text-decoration-color: #0b9c1b;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.2rem;
 }
 main .cards__container .card .card-header i {
   font-size: 2.7rem;
-  color: #0B9C1B;
+  color: #0b9c1b;
 }
 main .cards__container .card .card-body {
   line-height: 2.5rem;
@@ -258,7 +298,7 @@ main .cards__container i {
   text-decoration-color: #fff;
 }
 main .cards__container .card:hover {
-  background-color: #0B9C1B;
+  background-color: #0b9c1b;
   color: #fff;
   box-shadow: none;
 }
@@ -273,9 +313,9 @@ main .cards__container .card:hover i {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: #0B9C1B;
+  color: #0b9c1b;
   padding: 0 5rem;
-  background: linear-gradient(120deg, #fff 50%, #0B9C1B 50%);
+  background: linear-gradient(120deg, #fff 50%, #0b9c1b 50%);
   border-top: 0.1rem solid rgba(11, 156, 27, 0.5);
 }
 .contact__container .instruction {
@@ -311,11 +351,11 @@ main .cards__container .card:hover i {
 .contact__container form input:focus,
 .contact__container form select:focus,
 .contact__container form textarea:focus {
-  border: 0.1rem solid #0B9C1B;
+  border: 0.1rem solid #0b9c1b;
 }
 .contact__container form button {
   padding: 1.5rem 2rem;
-  background-color: #0B9C1B;
+  background-color: #0b9c1b;
   color: #fff;
   cursor: pointer;
   border: none;
@@ -352,19 +392,22 @@ footer .footer-content .open-hours p {
   font-weight: 400;
   font-size: 1.6rem;
 }
-footer .footer-content .resources span, footer .footer-content .socials span {
+footer .footer-content .resources span,
+footer .footer-content .socials span {
   display: flex;
   flex-direction: column;
   line-height: 1.9;
 }
-footer .footer-content .resources span a, footer .footer-content .socials span a {
+footer .footer-content .resources span a,
+footer .footer-content .socials span a {
   color: #fff;
   text-decoration: none;
   font-weight: 400;
   font-size: 1.6rem;
 }
-footer .footer-content .resources span a:hover, footer .footer-content .socials span a:hover {
-  color: #0B9C1B;
+footer .footer-content .resources span a:hover,
+footer .footer-content .socials span a:hover {
+  color: #0b9c1b;
 }
 footer .copyright {
   padding: 3rem;
@@ -447,7 +490,7 @@ footer .copyright p {
   }
   main .info__summary {
     flex-direction: column;
-    background: #0B9C1B;
+    background: #0b9c1b;
   }
   main .info__summary h2 {
     width: 100%;
@@ -477,7 +520,7 @@ footer .copyright p {
   .contact__container {
     padding: 10rem 5rem;
     flex-direction: column;
-    background: #0B9C1B;
+    background: #0b9c1b;
   }
   .contact__container .instruction {
     width: 70%;
@@ -582,7 +625,7 @@ footer .copyright p {
   }
   main .info__summary .info__badges .badge {
     width: 90%;
-    color: #FEB201;
+    color: #feb201;
   }
   main .info__summary .info__badges .badge i {
     font-size: 2.5rem;
