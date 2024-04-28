@@ -552,6 +552,9 @@ footer .copyright p {
     text-align: center;
     transition: transform 0.6s ease;
   }
+  header .nav-links .dropdown-menu {
+    position: static;
+  }
   header form {
     display: none;
   }

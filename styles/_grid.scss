@@ -224,7 +224,6 @@
       }
 
       .info__badges {
-
         .badge {
           width: 25rem;
           // color: #fff;
@@ -284,7 +283,7 @@
           // margin-bottom: 2rem;
 
           h3 {
-           font-size: 2.2rem;
+            font-size: 2.2rem;
           }
 
           i {
@@ -318,26 +317,26 @@
   }
 
   /******************INQUIRY SECTION*******************/
-  .contact__container{
+  .contact__container {
     padding: 10rem 5rem;
     flex-direction: column;
     background: $secondary;
 
-    .instruction{
+    .instruction {
       width: 70%;
       margin-bottom: 4rem;
 
-      h2{
+      h2 {
         color: $white;
         // @include text-lg($weight: 500);
       }
-      p{
+      p {
         color: $white;
         width: 100%;
       }
     }
 
-    form{
+    form {
       width: 70%;
       // display: flex;
       // justify-content: center;
@@ -414,6 +413,47 @@
       //   // margin: 0 auto;
       //   // font-size: 1.9rem;
       // }
+
+      .dropdown-menu {
+        position: static;
+        // padding: 2rem 0;
+        // // bottom: 10%;
+        // top: 11%;
+        // // width: 24rem;
+        // // height: 26rem;
+        // flex-direction: column;
+        // justify-content: center;
+        // gap: 1rem;
+        // background-color: $gray;
+        // transition: all 0.2s;
+        // animation: MoveInBottom 0.3s ease-out backwards;
+        // display: none;
+
+        // li {
+        //   list-style: none;
+        //   padding: 0.6rem 0;
+        //   @include text-xsm();
+
+        //   &:hover {
+        //     background-color: $secondary;
+        //   }
+        //   &:hover a {
+        //     color: #fff;
+        //   }
+
+        //   .dropdown-menu__item {
+        //     padding: 3rem;
+        //   }
+        // }
+      }
+
+      // .services-dropdown{
+      //   top: 12%;
+      // }
+
+      // .dropdown-link:active .dropdown-menu {
+      //   display: flex;
+      // }
     }
 
     form {
@@ -457,8 +497,8 @@
   }
 }
 
-@media screen and (max-width: 780px){
-  main .cards__container{
+@media screen and (max-width: 780px) {
+  main .cards__container {
     flex-wrap: wrap;
     // .card{
     //   width: 0;
@@ -467,27 +507,26 @@
   }
 }
 
-@media screen and (max-width: 650px){
-  main .info__summary h2{
+@media screen and (max-width: 650px) {
+  main .info__summary h2 {
     @include text-md($weight: 500, $size: 3rem);
-
   }
 
-   .contact__container{
+  .contact__container {
     padding-left: 2rem;
     padding-right: 2rem;
 
-    .instruction{
+    .instruction {
       width: 90%;
     }
 
-    form{
+    form {
       width: 90%;
     }
   }
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 570px) {
   /******************** INFO SECTION*********************/
   main {
     .info__summary {
@@ -533,7 +572,7 @@
           }
 
           .number {
-            @include text-md($weight: 600,  $size: 3rem);
+            @include text-md($weight: 600, $size: 3rem);
             // font-weight: 600;
           }
           // .text {
@@ -550,7 +589,6 @@
       // width: 100%;
       // height: 50vh;
       // padding: 8rem;
-      
 
       .card {
         margin-bottom: 4rem;
@@ -614,7 +652,6 @@
   //   padding-left: 2rem;
   //   padding-right: 2rem;
   // }
-  
 }
 
 @media screen and (max-width: 490px) {
@@ -679,35 +716,33 @@
   }
 
   /******************INQUIRY SECTION*******************/
-  .contact__container{
-    .instruction{
+  .contact__container {
+    .instruction {
       width: 100%;
       margin-bottom: 2rem;
     }
 
-    form{
+    form {
       width: 100%;
     }
   }
 }
 
-@media screen and (max-width: 390px){
-  main .cards__container{
+@media screen and (max-width: 390px) {
+  main .cards__container {
     padding: 8rem 3rem;
     .card {
-        .card-header {
-
-          h3 {
-           font-size: 2rem;
+      .card-header {
+        h3 {
+          font-size: 2rem;
           //  color: $secondary;
           //  font-weight: 400;
           //  text-decoration: underline;
           //  text-decoration-color: $secondary;
           //  text-underline-offset: 1rem;
           //  text-decoration-thickness: 0.2rem;
-          }
         }
       }
+    }
   }
 }
-
