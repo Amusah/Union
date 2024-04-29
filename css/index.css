@@ -588,6 +588,9 @@ footer .copyright p {
   main .cards__container {
     flex-wrap: wrap;
   }
+  footer .footer-content .open-hours {
+    display: none;
+  }
 }
 @media screen and (max-width: 650px) {
   main .info__summary h2 {
@@ -656,6 +659,11 @@ footer .copyright p {
   }
   .contact__container form {
     width: 100%;
+  }
+  /****************** FOOTER SECTION **********************/
+  footer .footer-content {
+    flex-direction: column;
+    gap: 5rem;
   }
 }
 @media screen and (max-width: 390px) {

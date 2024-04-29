@@ -398,6 +398,7 @@ footer {
     padding: 8rem 4rem;
     display: flex;
     justify-content: space-evenly;
+    // flex-wrap: wrap;
 
     h3 {
       @include text-sm($weight: 600, $size: 1.9rem);
