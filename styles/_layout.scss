@@ -49,7 +49,7 @@ header {
       position: absolute;
       padding: 2rem 0;
       // bottom: 10%;
-      top: 11%;
+      top: 10%;
       // width: 24rem;
       // height: 26rem;
       flex-direction: column;
@@ -77,10 +77,6 @@ header {
         }
       }
     }
-
-    // .services-dropdown{
-    //   top: 12%;
-    // }
 
     .dropdown-link:hover .dropdown-menu{
       display: flex;
@@ -144,9 +140,25 @@ header {
 
 /************************HERO SECTION***********************/
 main {
-  // #hero{
-  //   position: relative;
-  // }
+  .news{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+    // z-index: -5;
+    span{
+      background-color: $secondary;
+      color: #fff;
+      padding: .3rem 1rem;
+      @include text-sm();
+    }
+
+    marquee{
+      color: $secondary;
+      @include text-sm();
+    }
+  }
+
   .banner {
     min-height: 90vh;
     background-image: url("/images/slide1.jpg");
