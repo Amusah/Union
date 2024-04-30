@@ -59,18 +59,18 @@ header .nav-links {
   justify-content: space-between;
   align-items: center;
 }
-header .nav-links .nav-link__item {
+header .nav-links .nav-link__item, header .nav-links .dropdown-link {
   list-style: none;
   letter-spacing: 0.1rem;
   cursor: pointer;
   font-weight: 400;
   font-size: 2.1rem;
 }
-header .nav-links .nav-link__item a {
+header .nav-links .nav-link__item a, header .nav-links .dropdown-link a {
   color: #000;
   text-decoration: none;
 }
-header .nav-links .nav-link__item:hover a:not(.dropdown-menu__item) {
+header .nav-links .nav-link__item:hover a:not(.dropdown-menu__item), header .nav-links .dropdown-link:hover a:not(.dropdown-menu__item) {
   color: #0b9c1b;
   text-decoration: underline;
   text-decoration-color: #0b9c1b;
@@ -475,6 +475,9 @@ footer .copyright p {
   }
   header .nav-links {
     width: 65%;
+  }
+  header .nav-links .dropdown-menu {
+    top: 70%;
   }
   header form {
     position: absolute;
