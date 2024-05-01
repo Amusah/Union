@@ -176,7 +176,7 @@
     .nav-links {
       width: 65%;
 
-      .dropdown-menu{
+      .dropdown-menu {
         top: 70%;
       }
     }
@@ -408,10 +408,33 @@
       padding: 5rem 0;
       text-align: center;
       transition: transform 0.6s ease;
+      z-index: 4;
+
+      // .dropdown-link{
+      //   position: static;
+      // }
+
+      .dropdown-link span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: 4rem;
+      }
+
+      .dropdown-link span .fa-solid{
+        display: flex;
+        margin-left: 2rem;
+      }
 
       .dropdown-menu {
         position: static;
       }
+
+      .dropdown-link:hover .dropdown-menu {
+        display: none;
+      }
+
     }
 
     form {
@@ -420,7 +443,7 @@
 
     .burger {
       display: block;
-      z-index: 2;
+      z-index: 5;
       transition: transform 0.6s ease;
 
       & span {
@@ -464,8 +487,8 @@
     // }
   }
 
-  footer .footer-content{
-    .open-hours{
+  footer .footer-content {
+    .open-hours {
       display: none;
     }
   }
@@ -692,7 +715,7 @@
   }
 
   /****************** FOOTER SECTION **********************/
-  footer .footer-content{
+  footer .footer-content {
     // flex-wrap: wrap;
     flex-direction: column;
     gap: 5rem;

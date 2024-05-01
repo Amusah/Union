@@ -28,6 +28,8 @@ header {
       list-style: none;
       letter-spacing: 0.1rem;
       cursor: pointer;
+      // width: 100%;
+      // margin: 0 auto;
       @include text-sm();
 
       a {
@@ -43,7 +45,10 @@ header {
       }
     }
 
-
+    .dropdown-link span .fa-solid{
+      color: $secondary;
+      display: none;
+    }
 
     .dropdown-menu {
       position: absolute;
@@ -58,6 +63,7 @@ header {
       background-color: $gray;
       transition: all 0.2s;
       animation: MoveInBottom 0.3s ease-out backwards;
+      z-index: 3;
       display: none;
       
       li {
