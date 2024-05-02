@@ -652,9 +652,9 @@
     //   // margin: 0 auto;
     // }
 
-    // .brand-logo {
-    //   width: 15rem;
-    // }
+    a .brand-logo {
+      width: 15rem;
+    }
 
     .nav-links {
       // position: fixed;
@@ -723,6 +723,10 @@
 }
 
 @media screen and (max-width: 390px) {
+  header a .brand-logo{
+    width: 10rem;
+  }
+
   main .cards__container {
     padding: 8rem 3rem;
     .card {

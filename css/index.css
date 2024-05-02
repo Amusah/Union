@@ -169,7 +169,8 @@ main {
 main .news {
   display: flex;
   align-items: center;
-  padding: 0 6rem;
+  width: 90%;
+  margin: 0 auto;
 }
 main .news span {
   background-color: #0b9c1b;
@@ -441,6 +442,126 @@ footer .copyright p {
   font-size: 1.6rem;
 }
 
+.page-head {
+  background-color: #0b9c1b;
+  color: #fff;
+  padding: 3rem 0;
+}
+.page-head .page-nav {
+  width: 90%;
+  margin: 0 auto;
+}
+.page-head .page-nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 18%;
+}
+.page-head .page-nav-links .page-nav-link__item {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+.page-head .page-nav-links .page-nav-link__item a {
+  text-decoration: none;
+  color: #feb201;
+}
+.page-head .page-title {
+  margin-top: 2.5rem;
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+.about-container {
+  width: 100%;
+}
+.about-container .about-info {
+  display: flex;
+  width: 90%;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+.about-container .about-info-text h3 {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+.about-container .about-info-text p {
+  line-height: 2.5rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.about-container .profile img {
+  width: 20rem;
+  height: 25rem;
+}
+.about-container .team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  padding: 10rem 0;
+  margin: 0 auto;
+}
+.about-container .team h2 {
+  text-decoration: underline;
+  text-decoration-color: #0b9c1b;
+  text-decoration-thickness: 0.3rem;
+  text-underline-offset: 1.2rem;
+  margin-bottom: 10rem;
+  font-weight: 400;
+  font-size: 3.2rem;
+}
+.about-container .team .team-members span {
+  width: 20rem;
+  height: 25rem;
+}
+.about-container .team .team-members span .overlay {
+  position: absolute;
+  width: 20rem;
+  height: 25rem;
+  background: rgba(11, 156, 27, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-container .team .team-members span .overlay h3 {
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  font-size: 2.3rem;
+}
+.about-container .team .team-members span .overlay p {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.about-container .team .team-members span .overlay a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.about-container .team .team-members span .overlay .social-icons {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-container .team .team-members span .overlay .social-icons .fa-brands {
+  color: #fff;
+  background-color: red;
+  font-size: 2rem;
+}
+.about-container .team .team-members span img {
+  width: 20rem;
+  height: 25rem;
+}
+
 @media screen and (max-width: 1080px) {
   header .navbar {
     width: 100%;
@@ -689,6 +810,9 @@ footer .copyright p {
   }
 }
 @media screen and (max-width: 490px) {
+  header a .brand-logo {
+    width: 15rem;
+  }
   header .nav-links {
     width: 100%;
   }
@@ -707,6 +831,9 @@ footer .copyright p {
   }
 }
 @media screen and (max-width: 390px) {
+  header a .brand-logo {
+    width: 10rem;
+  }
   main .cards__container {
     padding: 8rem 3rem;
   }
