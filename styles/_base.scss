@@ -82,3 +82,18 @@ $white: #fff;
     transform: translate(0);
   }
 }
+
+@keyframes MoveInTop{
+  0%{
+    opacity: 0;
+    // transform: translateY(-30px);
+    transform: rotateX(90deg);
+  }
+
+  100%{
+    opacity: 1;
+    // transform: translateY(0);
+    transform: rotateX(0);
+  }
+}
+
