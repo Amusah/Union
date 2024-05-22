@@ -488,8 +488,12 @@ footer .copyright p {
 .about-container .about-info {
   display: flex;
   width: 90%;
+  height: 40vh;
   margin: 2rem auto;
   gap: 2rem;
+}
+.about-container .about-info-text {
+  width: 70%;
 }
 .about-container .about-info-text h3 {
   margin-bottom: 1.5rem;
@@ -497,13 +501,16 @@ footer .copyright p {
   font-size: 3.2rem;
 }
 .about-container .about-info-text p {
-  line-height: 2.5rem;
+  line-height: 3rem;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 2.1rem;
+}
+.about-container .profile {
+  width: 30%;
 }
 .about-container .profile img {
-  width: 20rem;
-  height: 25rem;
+  width: 100%;
+  height: 100%;
 }
 .about-container .team {
   display: flex;
@@ -511,7 +518,7 @@ footer .copyright p {
   align-items: center;
   flex-direction: column;
   width: 90%;
-  padding: 10rem 0;
+  padding: 8rem 0;
   margin: 0 auto;
 }
 .about-container .team h2 {
@@ -531,6 +538,7 @@ footer .copyright p {
 .about-container .team .team-members span {
   width: 20rem;
   height: 25rem;
+  cursor: pointer;
 }
 .about-container .team .team-members span .overlay {
   position: absolute;
@@ -540,7 +548,6 @@ footer .copyright p {
   color: #fff;
   text-align: center;
   padding: 3rem 1rem;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -591,6 +598,42 @@ footer .copyright p {
   animation: MoveInTop 0.7s ease-in-out backwards;
 }
 
+@media screen and (max-width: 760px) {
+  .page-head {
+    margin-bottom: 5rem;
+  }
+  .about-container .about-info {
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-container .about-info-text {
+    width: 100%;
+  }
+  .about-container .profile {
+    width: 100%;
+  }
+  .about-container .team .team-members {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .about-container .team .team-members span {
+    width: 100%;
+    height: 100%;
+  }
+  .about-container .team .team-members span .overlay {
+    position: absolute;
+    height: auto;
+    width: auto;
+    padding: 3rem;
+  }
+  .about-container .team .team-members span .overlay .social-icons {
+    gap: 2rem;
+  }
+}
 @media screen and (max-width: 1080px) {
   header .navbar {
     width: 100%;
